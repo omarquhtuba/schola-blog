@@ -41,7 +41,7 @@ app.use("/api/post", postRoute);
 if(process.env.NODE_ENV === 'production'){
 app.use(express.static(path.join(__dirname,"blog/build")));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'blog/bluid', 'index.html'))
+  res.sendFile(path.join(__dirname, 'blog/build', 'index.html'))
 })}
 
 app.listen(process.env.PORT || 5000, () => {
