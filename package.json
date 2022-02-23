@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "heroku-postbuild": "cd blog && npm install && npm run build"
   },
   "author": "",

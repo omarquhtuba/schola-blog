@@ -9,7 +9,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://scholarships-blog.herokuapp.com/images/";
   const user = useSelector(state => state.user.currentUser)
   const [title, setTitle] = useState("");
   const [intro, setIntro] = useState("");
