@@ -44,6 +44,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'blog/bluid', 'index.html'))
 })}
 
-app.listen(4000 , () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('backend is running')
 })
