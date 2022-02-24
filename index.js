@@ -13,10 +13,9 @@ const timeout = require('connect-timeout')
 
 dotenv.config();
 app.use(express.json());
-app.use(timeout('15s'))
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
-mongoose.connect(process.env.MONGO_URL,{useUnifiedTopology: true,
+mongoose.connect(process.env.MONGODB_URI,{useUnifiedTopology: true,
   useNewUrlParser: true, useCreateIndexes: true, useFindAndModify: true
 })
 .then(() => console.log('mongoDB is connected successfully'))
