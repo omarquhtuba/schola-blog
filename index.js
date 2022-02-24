@@ -8,10 +8,12 @@ const multer = require('multer');
 const path = require('path')
 const cors = require('cors')
 const app = express();
+const timeout = require('connect-timeout')
 
 
 dotenv.config();
 app.use(express.json());
+app.use(timeout('15s'))
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose.connect(process.env.MONGO_URL,{useUnifiedTopology: true,
