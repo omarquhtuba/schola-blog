@@ -11,7 +11,7 @@ export default function Homepage() {
       const fetchedPosts = async () => {
           const res = await axiosInstance.get("/post")
           setPosts(res.data)
-          console.log(res)
+      
       }
       fetchedPosts()
   },[])
